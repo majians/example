@@ -1,0 +1,247 @@
+@charset "utf-8";
+body,
+ul {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header_vip {
+    width: 100%;
+    height: 168px;
+    background-color: bisque;
+}
+
+#header_vip .top_vip {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    background-color: rgb(180, 175, 175);
+}
+
+#header_vip .top_vip .top_vip_1 {
+    width: 1170px;
+    height: 28px;
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+}
+
+#header_vip .top_vip_2 {
+    width: 100%;
+    height: 100px;
+    background-color: burlywood;
+}
+
+#header_vip .top_vip_2 .vip_1 {
+    width: 1170px;
+    height: 100px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+#header_vip .top_vip_3 {
+    width: 100%;
+    height: 40px;
+    background-color: #f10180;
+}
+
+#header_vip .top_vip_3 .vip_2 {
+    width: 1170px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #f10180;
+}
+
+#header_vip .top_vip_1 .address {
+    float: left;
+    line-height: 28px;
+}
+
+#header_vip .top_vip_1 .address1 {
+    float: right;
+    width: 711px;
+    height: 28px;
+    text-indent: 8px;
+}
+
+#header_vip .top_vip_1 .address1 li {
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    line-height: 28px;
+}
+
+#header_vip .top_vip_2 .vip_2 .vip_img {
+    width: 160px;
+    height: 100px;
+}
+
+#header_vip .top_vip_3 .vip_2 ul {
+    float: left;
+    width: 1170px;
+    height: 40px;
+}
+
+#header_vip .top_vip_3 .vip_2 ul li {
+    float: left;
+    list-style: none;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 72px;
+    height: 40px;
+}
+
+#header_vip .top_vip_3 .vip_2 ul li {
+    position: relative;
+    left: -40px;
+}
+
+#header_vip .top_vip_3 .vip_2 ul li:nth-child(12),
+#header_vip .top_vip_3 .vip_2 ul li:nth-child(13) {
+    position: relative;
+    left: 200px;
+}
+
+#header_vip .top_vip_3 .vip_2 ul li a {
+    color: #fff;
+}
+
+.beijing {
+    width: 100%;
+    height: 502px;
+    background-image: url(../image/weipinbeijing.jpg);
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+.beijing .beijing_zhu{
+    width: 1240px;
+    height:468px;
+    margin:0 auto;
+}
+
+.index_new_wrap {
+    width: 100%;
+    height: 755.6px;
+    /* background-color: #f10180; */
+}
+
+.index_new_wrap .index_new1 {
+    width: 1170px;
+    height: 755.6px;
+    margin: 0 auto;
+    /* background-color: #e6bcd2; */
+}
+
+.index_new_wrap .index_new1 .xuanchuan {
+    width: 1170px;
+    height: 30px;
+    background-image: url(../image/title.png);
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.index_new_wrap .index_new1 .index_title {
+    position: relative;
+    top: 20px;
+    width: 1170px;
+    height: 28px;
+}
+
+.index_new_wrap .index_new1 .index_title .index_title_1 {
+    float: left;
+}
+
+.index_new_wrap .index_new1 .index_title .index_title_1 span {
+    position: relative;
+    top: -7px;
+    /* line-height: 28px; */
+    font-size: 20px;
+}
+
+.index_new_wrap .index_new1 .index_title .index_title_1 img {
+    position: relative;
+    top: 5px;
+}
+
+.index_new_wrap .index_new1 .index_title .index_title_2 {
+    float: right;
+}
+
+.index_new_wrap .index_new1 .index_title .index_title_2 li {
+    float: left;
+    list-style: none;
+    line-height: 28px;
+}
+
+.index_new_wrap .index_new1 .index_new_cen {
+    position: relative;
+    top: 20px;
+    width: 1170px;
+    height: 601px;
+    /* background-color: bisque; */
+    margin: 0 auto;
+}
+
+.index_new_wrap .index_new1 .index_new_cen .index_new_cen_1 {
+    width: 286px;
+    height: 601px;
+    /* float: left; */
+    display: inline-block;
+    position: absolute;
+    left: -0px;
+    background-color: #49b3e4;
+}
+
+.index_new_cen_1 img{
+    width: 286px;
+    height:601;
+}
+
+.index_new_wrap .index_new1 .index_new_cen ul {
+    float: right;
+    width: 884px;
+    height: 600;
+}
+
+.index_new_wrap .index_new1 .index_new_cen li {
+    border-left: 0.5px solid #ccc;
+    list-style: none;
+    float: left;
+    width: 220px;
+    height: 300px;
+    /* border:0.5px solid black; */
+    /* background-color: aqua;   */
+}
+
+.index_new_wrap .index_new1 .index_new_cen li img {
+    display: inline-block;
+    position: relative;
+    left: 40.5px;
+    display: table-cell;
+    /* vertical-align用来该改变图片 */
+    vertical-align: top;
+    width: 140px;
+    height: 177px;
+    top: 20px
+}
+
+.index_new_wrap .index_new1 .index_new_cen li div {
+    position: relative;
+    top: 30px;
+    width: 140px;
+    height: 36px;
+    margin: 0 auto;
+}
+.index_new_wrap .index_new1 .index_new_cen li .jiage{
+    margin:0 auto;
+}
+.jiage .jiage_1 a{
+    color: #f10180;
+    font-size: 12px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById("canvas");
+			var cx=canvas.getContext("2d");
+			cx.fillStyle="lightblue";
+			cx.fillRect(0,0,400,400);
+
+			/*save():保存当前画布
+			restore():回滚
+
+			*/
+
+			cx.fillStyle="yellow";
+			cx.save();
+			cx.fillRect(0,0,100,50);
+			
+			//cx.scale(0.5,2);
+			//cx.translate(120,120);	//移动图形，携带坐标原点。
+			
+			//cx.restore();
+			cx.rotate(Math.PI/6);
+			cx.fillRect(120,120,100,50);
+
+
+
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="400px" height="400px"></canvas>
+	
+</body>
+</html>

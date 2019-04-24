@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById("canvas");
+			var cx=canvas.getContext("2d");
+			cx.fillStyle="lightblue";
+			cx.fillRect(0,0,400,400);
+
+			//cx.fillStyle="pink";
+			cx.strokeStyle="black";
+			cx.beginPath();	//开头
+			cx.moveTo(90,50);
+			cx.lineTo(346,236);
+			cx.lineTo(28,236);
+			cx.lineTo(286,50);
+			cx.lineTo(187,351);
+			//cx.moveTo(0,0);
+			//cx.closePath();
+			//cx.lineTo(120,150);
+			cx.closePath();		//结尾
+			//连续上图	cx.lineTo(120,140);
+			cx.stroke();
+			cx.fillStyle="red";
+			cx.fill();
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="400px" height="400px"></canvas>
+	
+</body>
+</html>

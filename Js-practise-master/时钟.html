@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+
+			var canvas=document.getElementById("canvas");
+			var cx=canvas.getContext("2d");
+			cx.fillStyle="#51b9c8";
+			cx.fillRect(0,0,600,600);
+
+			function clock(){
+				var date=new Date;
+			var hour=date.getHours();
+			var min=date.getMinutes();
+			var sec=date.getSeconds();
+
+			hour=hour+min/60;
+
+
+
+			var g=cx.fillStyle="white";
+			cx.beginPath();
+			cx.arc(300,250,210,0,Math.PI*2);
+			cx.closePath();
+			cx.fill();
+
+			var g=cx.createLinearGradient(10,10,600,600);
+			g.addColorStop(0.25,"rgba(255,0,0,0.2)");
+			g.addColorStop(0.5,"rgba(255,222,0,0.3)");
+			g.addColorStop(0.75,"rgba(255,0,255,0.5)");
+			g.addColorStop(1,"rgba(0,255,255,0.7)");
+			cx.fillStyle=g;
+
+
+			//表盘
+			cx.fillStyle="#215b64";
+			cx.beginPath();
+			cx.arc(300,250,200,0,Math.PI*2);
+			cx.closePath();
+			cx.fill();
+
+			//时刻度
+			cx.strokeStyle="white";
+			cx.lineWidth=2;
+			for(var i=0;i<12;i++){
+				cx.save();
+
+				cx.translate(300,250);
+				cx.rotate(i*Math.PI/6);
+				cx.beginPath();
+				cx.moveTo(0,-180);
+				cx.lineTo(0,-200);
+				cx.closePath();
+				cx.stroke();
+
+
+				cx.fillStyle="white";
+				cx.font="16px bold";
+				cx.rotate(Math.PI/6.3);
+				cx.fillText(i+1,0,-160);
+
+				cx.restore();
+			}
+
+			//分刻度
+			cx.strokeStyle="white";
+			cx.lineWidth=1;
+			for(var i=0;i<60;i++){
+				cx.save();
+
+				cx.translate(300,250);
+				cx.rotate(i*Math.PI/30);
+				cx.beginPath();
+				cx.moveTo(0,-190);
+				cx.lineTo(0,-200);
+				cx.closePath();
+				cx.stroke();
+
+				cx.restore();
+			}
+			//绘制时针。
+			cx.strokeStyle="white";
+			cx.lineWidth=5;
+			cx.save();
+			cx.translate(300,250);
+
+			cx.rotate(hour*Math.PI/6);
+			cx.beginPath();
+			cx.moveTo(0,10);
+			cx.lineTo(0,-100);
+			cx.closePath();
+			cx.stroke();
+
+
+
+			cx.restore();
+
+			//绘制分针
+			cx.strokeStyle="white";
+			cx.lineWidth=3;
+			cx.save();
+			cx.translate(300,250);
+			cx.rotate(min*Math.PI/30);
+			cx.beginPath();
+			cx.moveTo(0,10);
+			cx.lineTo(0,-150);
+			cx.closePath();
+			cx.stroke();
+			cx.restore();
+
+			//绘制秒针
+			cx.strokeStyle="black";
+			cx.lineWidth=2;
+			cx.save();
+			cx.translate(300,250);
+			cx.rotate(sec*Math.PI/30);
+			cx.beginPath();
+			cx.moveTo(0,10);
+			cx.lineTo(0,-175);
+			cx.closePath();
+			cx.stroke();
+			cx.restore();
+			
+
+			//绘制交叉点
+			
+			cx.fillStyle="#ccc";
+			cx.strokeStyle="black";
+
+			cx.save();
+			cx.translate(300,250);
+			cx.beginPath();
+			cx.arc(0,0,5,0,Math.PI*2);
+			cx.closePath();
+			cx.stroke();
+			cx.fill();
+			cx.restore();
+
+
+
+			}
+			setInterval(clock,1000);
+
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="600px" height="600px"></canvas>
+	
+</body>
+</html>

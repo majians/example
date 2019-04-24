@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById("canvas");
+			var cx=canvas.getContext("2d");
+
+			cx.fillStyle="lightblue";
+			cx.fillRect(0,0,700,700);
+			cx.fillStyle="rgba(255,0,0,0.3)";
+			cx.translate(200,200);
+			for(var i=0;i<100;i++){
+				cx.translate(25,25);
+				cx.scale(0.95,0.95);
+				cx.rotate(Math.PI/10);
+				cx.fillRect(0,0,100,50);
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="700" height="700"></canvas>
+</body>
+</html>

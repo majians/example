@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById("canvas");
+			var cx=canvas.getContext("2d");
+			//cx.fillStyle="lightblue";
+			//cx.fillRect(0,0,400,400);
+
+		/*	cx.fillStyle="red";
+			
+			cx.shadowOffsetX=10;
+			cx.shadowOffsetY=10;
+			cx.shadowColor="black";
+			cx.shadowBlur=10;
+			cx.fillRect(100,100,100,50);
+		*/	//cx.globalCompositeOperation="copy";
+			//cx.fillStyle="blue";
+			//cx.fillRect(100,100,50,100);
+
+			var img=document.images[0];
+			//cx.drawImage(img,0,0,100,200,0,0,300,300);
+			/*var pattern = cx. createPattern(img,'no-repeat');
+			cx.fillStyle = pattern;
+			cx.fillRect(0,0,200,200);
+		*/
+		/*var p=cx.getImageData(0,0,100,100);
+
+		cx.putImageDate(p,100,100);
+		*/
+
+			cx.strokeStyle="blue";		
+			cx.font="30px 微软雅黑";
+
+			//cx.fillText("hello",100,100,100);
+			cx.strokeText("hello",100,100,100);
+
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="400px" height="400px"></canvas>
+	<img src="./images/1.png" alt="">
+</body>
+</html>

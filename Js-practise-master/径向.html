@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById("canvas");
+			var cx=canvas.getContext("2d");
+			cx.fillStyle="lightblue";
+			cx.fillRect(0,0,400,400);
+
+			var g=cx.createRadialGradient(150,100,0,100,100,100);
+			g.addColorStop(0,"orange");
+			g.addColorStop(0.3,"pink");
+			g.addColorStop(0.5,"green");
+			g.addColorStop(0.7,"pink");
+			g.addColorStop(1,"white");
+
+
+			cx.fillStyle=g;
+			cx.beginPath();
+			cx.arc(100,100,100,0,Math.PI*2);
+			cx.closePath();
+			cx.fill();
+
+			
+		}
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="400px" height="400px"></canvas>
+	
+</body>
+</html>
